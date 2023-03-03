@@ -1,0 +1,1 @@
+const tarifModel = require("./tarif-model");
