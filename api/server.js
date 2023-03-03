@@ -1,6 +1,6 @@
 const express = require("express");
 
-const tarifRouter = require("./recipe/recipe-router");
+const tarifRouter = require("./tarifler/tarif-router");
 
 const server = express();
 
