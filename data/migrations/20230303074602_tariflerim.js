@@ -10,11 +10,10 @@ exports.up = function (knex) {
             tbl.timestamp("kayit_tarihi").defaultTo(knex.fn.now()); //default olursa o günü alsın.
         })
         .createTable("adimlar", (tbl) => {
-            tbl.increments("adim_id"); //adim_id(pk)
-            tbl.integer("adim_sirasi").notNullable().unsigned();
-            tbl.string("adim_talimati").notNullable();
-            tbl
-                .integer("tarif_id")
+            tbl .increments("adim_id"); //adim_id(pk)
+            tbl .integer("adim_sirasi").notNullable().unsigned();
+            tbl .string("adim_talimati").notNullable();
+            tbl .integer("tarif_id")
                 .unsigned()
                 .notNullable()
                 .references("tarif_id")
